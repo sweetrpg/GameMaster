@@ -19,9 +19,9 @@ public class BlockInit {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, GameMaster.MOD_ID);
     public static final DeferredRegister<Item> ITEMS = ItemInit.ITEMS;
 
-    public static final RegistryObject<Block> SCEPTER_BLOCK = register("scepter_block",
-            () -> new Block(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.COLOR_PURPLE).strength(3.0f).sound(SoundType.ANVIL).requiresCorrectToolForDrops()),
-            object -> () -> new BlockItem(object.get(), new BlockItem.Properties().tab(GameMaster.GAMEMASTER_TAB)));
+//    public static final RegistryObject<Block> SCEPTER_BLOCK = register("scepter_block",
+//            () -> new Block(BlockBehaviour.Properties.of(Material.METAL, MaterialColor.COLOR_PURPLE).strength(3.0f).sound(SoundType.ANVIL).requiresCorrectToolForDrops()),
+//            object -> () -> new BlockItem(object.get(), new BlockItem.Properties().tab(GameMaster.GAMEMASTER_TAB)));
 
     private static <T extends Block> RegistryObject<T> registerBlock(final String name, final Supplier<? extends T> block) {
         return BLOCKS.register(name, block);
