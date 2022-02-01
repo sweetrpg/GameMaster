@@ -1,5 +1,6 @@
 package com.sweetrpg.minecraft.gamemaster.datagen;
 
+import com.sweetrpg.minecraft.gamemaster.setup.Registration;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.tags.BlockTagsProvider;
 import net.minecraft.data.tags.ItemTagsProvider;
@@ -16,6 +17,9 @@ public class ModItemTags extends ItemTagsProvider {
 
     @Override
     protected void addTags() {
-
+        tag(Registration.RPG_ITEMS_TAG)
+                .add(Registration.ROD_ITEM.get())
+                .add(Registration.SCEPTER_ITEM.get())
+                .add(Registration.USURPER_ITEM.get());
     }
 }

@@ -6,19 +6,19 @@
     ]
   },
   "criteria": {
-    "diamond": {
+    "has_diamond": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:diamond"
+              "minecraft:diamond_block"
             ]
           }
         ]
       }
     },
-    "ender_eye": {
+    "has_eye": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -30,7 +30,7 @@
         ]
       }
     },
-    "obsidian": {
+    "has_obsidian": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -51,9 +51,9 @@
   },
   "requirements": [
     [
-      "diamond",
-      "ender_eye",
-      "obsidian",
+      "has_diamond",
+      "has_eye",
+      "has_obsidian",
       "has_the_recipe"
     ]
   ]

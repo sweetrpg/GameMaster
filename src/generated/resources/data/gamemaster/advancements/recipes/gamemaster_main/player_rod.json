@@ -6,19 +6,19 @@
     ]
   },
   "criteria": {
-    "emerald": {
+    "has_emerald": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:emerald"
+              "minecraft:emerald_block"
             ]
           }
         ]
       }
     },
-    "chiseled_stone_bricks": {
+    "has_bricks": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -39,8 +39,8 @@
   },
   "requirements": [
     [
-      "emerald",
-      "chiseled_stone_bricks",
+      "has_emerald",
+      "has_bricks",
       "has_the_recipe"
     ]
   ]

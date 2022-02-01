@@ -1,6 +1,7 @@
 package com.sweetrpg.minecraft.gamemaster.datagen;
 
 import com.sweetrpg.minecraft.gamemaster.Constants;
+import com.sweetrpg.minecraft.gamemaster.setup.Registration;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.tags.BlockTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;

@@ -6,7 +6,7 @@
     ]
   },
   "criteria": {
-    "gm_usurper": {
+    "has_usurper": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -27,7 +27,7 @@
   },
   "requirements": [
     [
-      "gm_usurper",
+      "has_usurper",
       "has_the_recipe"
     ]
   ]

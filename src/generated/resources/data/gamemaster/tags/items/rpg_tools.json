@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "gamemaster:player_rod",
+    "gamemaster:gm_scepter",
+    "gamemaster:gm_usurper"
+  ]
+}
