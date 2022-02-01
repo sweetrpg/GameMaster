@@ -37,6 +37,8 @@ public class Registration {
         ENTITIES.register(FMLJavaModLoadingContext.get().getModEventBus());
     }
 
+    public static final Item.Properties ITEM_PROPERTIES = new Item.Properties().tab(ModSetup.GAMEMASTER_TAB);
+
     public static final RegistryObject<Item> SCEPTER_ITEM = ITEMS.register("gm_scepter", () ->
             new Item(new Item.Properties().tab(ModSetup.GAMEMASTER_TAB).stacksTo(1).setNoRepair().fireResistant().rarity(Rarity.EPIC)));
     public static final RegistryObject<Item> USURPER_ITEM = ITEMS.register("gm_usurper", () ->
@@ -45,5 +47,9 @@ public class Registration {
             new Item(new Item.Properties().tab(ModSetup.GAMEMASTER_TAB).stacksTo(1).durability(1).rarity(Rarity.RARE)));
 
     public static final Tags.IOptionalNamedTag<Item> RPG_ITEMS_TAG = ItemTags.createOptional(modResLoc("rpg_tools"));
+
+    public static <B extends Block> RegistryObject<Item> fromBlock(RegistryObject<B> block) {
+        return ITEMS.register(block.getId().getPath(), () -> new BlockItem(block.get(), ITEM_PROPERTIES));
+    }
 
 }
