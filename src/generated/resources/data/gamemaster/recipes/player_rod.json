@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "gamemaster",
+  "pattern": [
+    "*E*",
+    " S ",
+    " S "
+  ],
+  "key": {
+    "*": {
+      "tag": "minecraft:small_flowers"
+    },
+    "E": {
+      "item": "minecraft:emerald_block"
+    },
+    "S": {
+      "item": "minecraft:chiseled_stone_bricks"
+    }
+  },
+  "result": {
+    "item": "gamemaster:player_rod"
+  }
+}

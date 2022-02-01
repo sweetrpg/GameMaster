@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "gamemaster:gm_scepter"
+    ]
+  },
+  "criteria": {
+    "gm_usurper": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "gamemaster:gm_usurper"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "gamemaster:gm_scepter"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "gm_usurper",
+      "has_the_recipe"
+    ]
+  ]
+}

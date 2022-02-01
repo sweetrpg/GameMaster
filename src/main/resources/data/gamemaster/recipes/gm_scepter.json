@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:smelting",
-  "ingredient": {
-    "item": "gamemaster:gm_usurper"
-  },
-  "result": "gamemaster:gm_scepter",
-  "experience": 0.0,
-  "cookingtime": 500
-}
