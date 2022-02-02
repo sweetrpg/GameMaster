@@ -1,5 +1,6 @@
 package com.sweetrpg.minecraft.gamemaster.util;
 
+import com.sweetrpg.minecraft.gamemaster.Constants;
 import com.sweetrpg.minecraft.gamemaster.GameMaster;
 import net.minecraft.resources.ResourceLocation;
 import org.checkerframework.checker.nullness.qual.NonNull;
@@ -20,7 +21,7 @@ public class Utils {
 
     @NonNull
     public static ResourceLocation mcResLoc(String name) {
-        return new ResourceLocation("minecraft", name);
+        return new ResourceLocation(Constants.MINECRAFT_ID, name);
     }
 
     @NonNull

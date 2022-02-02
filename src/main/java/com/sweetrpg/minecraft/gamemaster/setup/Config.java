@@ -1,5 +1,6 @@
 package com.sweetrpg.minecraft.gamemaster.setup;
 
+import com.sweetrpg.minecraft.gamemaster.Constants;
 import net.minecraftforge.common.ForgeConfigSpec;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -28,7 +29,7 @@ public class Config {
         ForgeConfigSpec.Builder SERVER_BUILDER = new ForgeConfigSpec.Builder();
         ForgeConfigSpec.Builder CLIENT_BUILDER = new ForgeConfigSpec.Builder();
 
-        CLIENT_BUILDER.comment("General settings").push(CATEGORY_GENERAL);
+        CLIENT_BUILDER.comment(Constants.CONFIG_GENERAL_SETTINGS_COMMENT).push(CATEGORY_GENERAL);
 //        ROTATION_SPEED = CLIENT_BUILDER.comment("Rotation speed of the magic block").defineInRange("rotationSpeed", 100.0, 0.0, 1000000.0);
         CLIENT_BUILDER.pop();
 

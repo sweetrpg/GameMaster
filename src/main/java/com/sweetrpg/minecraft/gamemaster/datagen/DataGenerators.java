@@ -1,5 +1,6 @@
 package com.sweetrpg.minecraft.gamemaster.datagen;
 
+import com.sweetrpg.minecraft.gamemaster.Constants;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -21,7 +22,7 @@ public class DataGenerators {
         if (event.includeClient()) {
             generator.addProvider(new ModBlockStates(generator, event.getExistingFileHelper()));
             generator.addProvider(new ModItemModels(generator, event.getExistingFileHelper()));
-            generator.addProvider(new ModLanguageProvider(generator, "en_us"));
+            generator.addProvider(new ModLanguageProvider(generator, Constants.LOCALE_EN_US));
         }
     }
 }

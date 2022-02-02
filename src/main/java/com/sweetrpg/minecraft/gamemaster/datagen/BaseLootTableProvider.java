@@ -2,6 +2,7 @@ package com.sweetrpg.minecraft.gamemaster.datagen;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.sweetrpg.minecraft.gamemaster.Constants;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.DataProvider;
 import net.minecraft.data.HashCache;
@@ -28,6 +29,8 @@ import java.nio.file.Path;
 import java.util.HashMap;
 import java.util.Map;
 
+import static com.sweetrpg.minecraft.gamemaster.Constants.MINECRAFT_ID;
+
 public abstract class BaseLootTableProvider extends LootTableProvider {
 
     private static final Logger LOGGER = LogManager.getLogger();
@@ -53,7 +56,7 @@ public abstract class BaseLootTableProvider extends LootTableProvider {
                                 .copy("inv", "BlockEntityTag.inv", CopyNbtFunction.MergeStrategy.REPLACE)
                                 .copy("energy", "BlockEntityTag.energy", CopyNbtFunction.MergeStrategy.REPLACE))
                         .apply(SetContainerContents.setContents(type)
-                                .withEntry(DynamicLoot.dynamicEntry(new ResourceLocation("minecraft", "contents"))))
+                                .withEntry(DynamicLoot.dynamicEntry(new ResourceLocation(MINECRAFT_ID, "contents"))))
                 );
         return LootTable.lootTable().withPool(builder);
     }
@@ -83,6 +86,6 @@ public abstract class BaseLootTableProvider extends LootTableProvider {
 
     @Override
     public String getName() {
-        return "Game Master LootTables";
+        return Constants.LOOT_TABLE_NAME;
     }
 }

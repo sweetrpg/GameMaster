@@ -22,7 +22,7 @@ import static com.sweetrpg.minecraft.gamemaster.GameMaster.MOD_ID;
 @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class ModSetup {
 
-    public static final CreativeModeTab GAMEMASTER_TAB = new CreativeModeTab(Constants.GAMEMASTER_TAB) {
+    public static final CreativeModeTab GAMEMASTER_TAB = new CreativeModeTab(Constants.GAMEMASTER_TAB_ID) {
         @Override
         @OnlyIn(Dist.CLIENT)
         public ItemStack makeIcon() {

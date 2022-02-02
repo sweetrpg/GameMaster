@@ -35,7 +35,7 @@ public class ModRecipes extends RecipeProvider {
                 .unlockedBy("has_diamond", InventoryChangeTrigger.TriggerInstance.hasItems(Items.DIAMOND_BLOCK))
                 .unlockedBy("has_eye", InventoryChangeTrigger.TriggerInstance.hasItems(Items.ENDER_EYE))
                 .unlockedBy("has_obsidian", InventoryChangeTrigger.TriggerInstance.hasItems(Items.OBSIDIAN))
-                .save(consumer, modResLoc("gm_usurper"));
+                .save(consumer, modResLoc(Constants.GM_USURPER_ID));
 
         ShapedRecipeBuilder.shaped(Registration.ROD_ITEM.get())
                 .pattern("*E*")
@@ -48,7 +48,7 @@ public class ModRecipes extends RecipeProvider {
                 .unlockedBy("has_emerald", InventoryChangeTrigger.TriggerInstance.hasItems(Items.EMERALD_BLOCK))
                 .unlockedBy("has_bricks", InventoryChangeTrigger.TriggerInstance.hasItems(Items.CHISELED_STONE_BRICKS))
 //                .unlockedBy("has_flowers", InventoryChangeTrigger.TriggerInstance.has(ItemTags.SMALL_FLOWERS))
-                .save(consumer, modResLoc("player_rod"));
+                .save(consumer, modResLoc(Constants.PLAYER_ROD_ID));
 
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(Registration.USURPER_ITEM.get()),
                         Registration.SCEPTER_ITEM.get(),
@@ -56,6 +56,6 @@ public class ModRecipes extends RecipeProvider {
                         500) // cooking time
                 .group(Constants.MOD_ID)
                 .unlockedBy("has_usurper", InventoryChangeTrigger.TriggerInstance.hasItems(Registration.USURPER_ITEM.get()))
-                .save(consumer, modResLoc("gm_scepter"));
+                .save(consumer, modResLoc(Constants.GM_SCEPTER_ID));
     }
 }
