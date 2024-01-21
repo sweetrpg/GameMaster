@@ -1,9 +1,5 @@
 package com.sweetrpg.minecraft.gamemaster.common.config;
 
-import com.sweetrpg.catherder.CatHerder;
-import com.sweetrpg.catherder.api.CatHerderAPI;
-import com.sweetrpg.catherder.api.registry.Talent;
-import com.sweetrpg.catherder.common.lib.Constants;
 import com.sweetrpg.minecraft.gamemaster.GameMaster;
 import net.minecraftforge.common.ForgeConfigSpec;
 import net.minecraftforge.eventbus.api.IEventBus;

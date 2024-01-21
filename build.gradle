@@ -80,7 +80,6 @@ minecraft {
 
     runs {
         client {
-            taskName 'catherder_client'
             workingDirectory file('run')
 
             property 'forge.logging.console.level', 'debug'
@@ -90,12 +89,11 @@ minecraft {
             property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
 
             mods {
-                catherder.sources((SourceSet[]) [sourceSets.main])
+                gamemaster.sources((SourceSet[]) [sourceSets.main])
             }
         }
 
         server {
-            taskName 'catherder_server'
             workingDirectory file('run-server')
 
             property 'forge.logging.console.level', 'debug'
@@ -104,12 +102,11 @@ minecraft {
             property 'mixin.env.remapRefMap', 'true'
             property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
             mods {
-                catherder.sources((SourceSet[]) [sourceSets.main])
+                gamemaster.sources((SourceSet[]) [sourceSets.main])
             }
         }
 
         data {
-            taskName 'catherder_data'
             workingDirectory file('run')
 
             property 'forge.logging.console.level', 'debug'
@@ -117,9 +114,9 @@ minecraft {
 
             property 'mixin.env.remapRefMap', 'true'
             property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
-            args '--mod', 'catherder', '--all', '--output', '"' + file('src/generated/resources/') + '"', '--existing', '"' + sourceSets.main.resources.srcDirs[0] + '"'
+            args '--mod', 'gamemaster', '--all', '--output', '"' + file('src/generated/resources/') + '"', '--existing', '"' + sourceSets.main.resources.srcDirs[0] + '"'
             mods {
-                catherder.sources((SourceSet[]) [sourceSets.main])
+                gamemaster.sources((SourceSet[]) [sourceSets.main])
             }
         }
     }
