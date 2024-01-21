@@ -12,7 +12,3 @@ A Minecraft mod that lets you control the world like a game master.
 ### Time Control
 
 TBD
-
-### Structures
-
-TBD

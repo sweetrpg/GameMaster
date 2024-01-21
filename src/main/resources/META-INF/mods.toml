@@ -1,28 +1,42 @@
-modLoader="javafml" #mandatory
-loaderVersion="[39,)" #mandatory This is typically bumped every Minecraft version by Forge. See our download page for lists of versions.
+modLoader="javafml"
+loaderVersion="${fml_version_range}"
 license="MIT"
-[[mods]] #mandatory
-modId="gamemaster" #mandatory
-version="${file.jarVersion}" #mandatory
-displayName="Game Master" #mandatory
-updateJSONURL="https://minecraft.sweetrpg.com/gamemaster/updates.json" #optional
-displayURL="https://minecraft.sweetrpg.com/gamemaster/" #optional
-logoFile="gamemaster.png" #optional
-credits="TBD" #optional
-authors="Paul Schifferer" #optional
-description='''
-TBD
-'''
+issueTrackerURL="https://github.com/sweetrpg/GameMaster/issues"
+displayURL="https://minecraft.curseforge.com/projects/gamemaster/"
+logoFile= "gm_logo.png"
 
-[[dependencies.gamemaster]] #optional
-    modId="forge" #mandatory
-    mandatory=true #mandatory
-    versionRange="[39,)" #mandatory
-    ordering="NONE"
-    side="BOTH"
+[[mods]]
+modId="gamemaster"
+version="${version}"
+updateJSONURL="https://minecraft.sweetrpg.com/mods/gamemaster/version.json"
+displayName="Gamemaster"
+credits="paulyhedral"
+authors="paulyhedral"
+description='''
+    Take control of the world!
+    '''
+
 [[dependencies.gamemaster]]
-    modId="minecraft"
-    mandatory=true
-    versionRange="[1.18.1,1.19)"
-    ordering="NONE"
-    side="BOTH"
+modId="forge"
+mandatory=true
+versionRange="${forge_version_range}"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.gamemaster]]
+modId="minecraft"
+mandatory=true
+versionRange="${minecraft_version_range}"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.gamemaster]]
+modId="configured"
+mandatory=false
+versionRange="[1.5.4,)"
+ordering="NONE"
+side="BOTH"
+
+[modproperties.configured]
+catalogueImageIcon="configured_icon.png"
+configuredBackground="minecraft:textures/block/gray_wool.png"
